@@ -1,0 +1,85 @@
+object frmChooseColor: TfrmChooseColor
+  Left = 0
+  Top = 0
+  ClientHeight = 567
+  ClientWidth = 384
+  Transparency = True
+  FormStyle = fsPopup
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Panel1: TPanel
+    Align = alCenter
+    Height = 359.000000000000000000
+    Width = 310.000000000000000000
+    TabOrder = 0
+    object Layout1: TLayout
+      Align = alBottom
+      Height = 49.000000000000000000
+      Position.Y = 310.000000000000000000
+      Width = 310.000000000000000000
+      object SpeedButton1: TSpeedButton
+        Height = 48.000000000000000000
+        ModalResult = 2
+        Position.Y = 1.000000000000000000
+        Text = #1054#1090#1084#1077#1085#1080#1090#1100
+        Trimming = ttCharacter
+        Width = 129.000000000000000000
+      end
+      object SpeedButton2: TSpeedButton
+        Anchors = [akTop, akRight]
+        Height = 48.000000000000000000
+        ModalResult = 1
+        Position.X = 184.000000000000000000
+        Position.Y = 1.000000000000000000
+        Text = #1055#1088#1080#1084#1077#1085#1080#1090#1100
+        Trimming = ttCharacter
+        Width = 126.000000000000000000
+      end
+    end
+    object ColorPanel: TColorPanel
+      Color = claWhite
+      ColorBox = ColorBox
+      Height = 233.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 64.000000000000000000
+      TabOrder = 1
+      UseAlpha = False
+      Width = 281.000000000000000000
+      OnChange = ColorPanelChange
+    end
+    object ColorBox: TColorBox
+      Color = claWhite
+      Height = 50.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      TabOrder = 2
+      Width = 50.000000000000000000
+    end
+    object edColorValue: TEdit
+      StyleName = 'White'
+      Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+      TabOrder = 3
+      Position.X = 80.000000000000000000
+      Position.Y = 16.000000000000000000
+      Width = 185.000000000000000000
+      Height = 32.000000000000000000
+      KillFocusByReturn = True
+      OnChange = edColorValueChange
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+  end
+end

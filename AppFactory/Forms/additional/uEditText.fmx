@@ -1,0 +1,60 @@
+object frmEditText: TfrmEditText
+  Left = 0
+  Top = 0
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object ToolBar1: TToolBar
+    Height = 48.000000000000000000
+    TabOrder = 0
+    Width = 384.000000000000000000
+    object Label1: TLabel
+      Align = alContents
+      Height = 48.000000000000000000
+      Text = #1056#1077#1076#1072#1082#1090#1086#1088' '#1090#1077#1082#1089#1090#1072
+      TextAlign = taCenter
+      Width = 384.000000000000000000
+      Trimming = ttCharacter
+    end
+  end
+  object ToolBar2: TToolBar
+    Align = alBottom
+    Height = 48.000000000000000000
+    Position.Y = 519.000000000000000000
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    Width = 384.000000000000000000
+    object SpeedButton1: TSpeedButton
+      Height = 48.000000000000000000
+      ModalResult = 2
+      Text = #1054#1090#1084#1077#1085#1080#1090#1100
+      Trimming = ttCharacter
+      Width = 129.000000000000000000
+    end
+    object SpeedButton2: TSpeedButton
+      Anchors = [akTop, akRight]
+      Height = 48.000000000000000000
+      ModalResult = 1
+      Position.X = 258.000000000000000000
+      Text = #1055#1088#1080#1084#1077#1085#1080#1090#1100
+      Trimming = ttCharacter
+      Width = 126.000000000000000000
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan, igLongTap, igDoubleTap]
+    Align = alClient
+    Height = 471.000000000000000000
+    TabOrder = 2
+    Width = 384.000000000000000000
+    CheckSpelling = True
+  end
+end

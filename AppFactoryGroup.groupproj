@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{23290C97-01C6-4CC7-95FC-A1E88AD194B0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AppFactory\AppFactory.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AppProducts\AppProducts.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SampleProduct\SampleProduct.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AppFactory">
+        <MSBuild Projects="AppFactory\AppFactory.dproj"/>
+    </Target>
+    <Target Name="AppFactory:Clean">
+        <MSBuild Projects="AppFactory\AppFactory.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppFactory:Make">
+        <MSBuild Projects="AppFactory\AppFactory.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AppProducts">
+        <MSBuild Projects="AppProducts\AppProducts.dproj"/>
+    </Target>
+    <Target Name="AppProducts:Clean">
+        <MSBuild Projects="AppProducts\AppProducts.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppProducts:Make">
+        <MSBuild Projects="AppProducts\AppProducts.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SampleProduct">
+        <MSBuild Projects="SampleProduct\SampleProduct.dproj"/>
+    </Target>
+    <Target Name="SampleProduct:Clean">
+        <MSBuild Projects="SampleProduct\SampleProduct.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SampleProduct:Make">
+        <MSBuild Projects="SampleProduct\SampleProduct.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AppFactory;AppProducts;SampleProduct"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AppFactory:Clean;AppProducts:Clean;SampleProduct:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AppFactory:Make;AppProducts:Make;SampleProduct:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
